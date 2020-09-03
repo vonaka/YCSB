@@ -105,7 +105,6 @@ public class ShreplicClient extends DB {
     }
 
     client = Ycsb.NewShreplicClient(type, maddr, server, mport, fast, localreads, leaderless, verbose, args);
-    System.out.println(client == null);
 
     try {
       client.Connect();
