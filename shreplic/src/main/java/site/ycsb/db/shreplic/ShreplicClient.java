@@ -86,7 +86,7 @@ public class ShreplicClient extends DB {
 
     String maddr = "localhost";
     if (getProperties().containsKey("maddr")) {
-      type = getProperties().getProperty("type");
+      type = getProperties().getProperty("maddr");
     }
 
     int mport = 7087;
