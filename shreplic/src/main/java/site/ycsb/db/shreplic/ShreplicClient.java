@@ -86,7 +86,7 @@ public class ShreplicClient extends DB {
 
     String maddr = "localhost";
     if (getProperties().containsKey("maddr")) {
-      type = getProperties().getProperty("maddr");
+      maddr = getProperties().getProperty("maddr");
     }
 
     int mport = 7087;
@@ -105,6 +105,7 @@ public class ShreplicClient extends DB {
     }
 
     client = Ycsb.NewShreplicClient(type, maddr, server, mport, fast, localreads, leaderless, verbose, args);
+    System.out.println(client == null);
 
     try {
       client.Connect();
